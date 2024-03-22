@@ -1,0 +1,38 @@
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+.footer_container {
+    position: fixed;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+    padding: 20px 10px;
+    z-index: 9999;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-top: 1px solid #696969;
+
+    @include mobile {
+        height: 10px;
+        font-size: 0.8rem;
+    }
+
+    .footer_link {
+        cursor: pointer;
+        text-decoration: underline;
+
+    }
+}
