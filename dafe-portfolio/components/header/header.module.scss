@@ -1,0 +1,109 @@
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+.header_container {
+    position: relative;
+    padding: 30px 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    top: 0;
+    left: 0;
+    right: 0;
+    // background-color: #111111;
+
+    @include mobile {
+        padding: 15px 10px;
+        border: 0;
+        width: 100vw;
+    }
+
+    .header_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        margin: auto;
+
+        .logo_container {
+            display: flex;
+            
+            
+            p {
+                margin: 0;
+                cursor: pointer;
+                color: #fff;
+                transition: all ease-out 0.2s;
+        
+                @include mobile {
+                    padding: 0;
+                    font-size: 1.2rem;
+                }
+    
+                &:hover {
+                    color: #b1b1b1;
+                    transform: scale(1.1);
+                }
+        
+                .header_logo {
+                    font-family: 'Gloria Hallelujah', cursive;
+                    font-size: 2rem;
+                    padding: 0;
+                    margin: 0;
+        
+                    
+                    @include mobile {
+                        padding: 0;
+                        font-size: 1.2rem;
+                    }
+                }
+             }
+        }
+    
+        .link_container {
+            list-style: none;
+            position: relative;
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .header_link_box {
+                margin: 0 20px;
+                cursor: pointer;
+                color: #eeeeee86;
+                transition: all ease-out 0.2s;
+                -webkit-tap-highlight-color: rgba($color: #000000, $alpha: 0.2);
+                margin: 0 10px;
+        
+                @include mobile {
+                    font-size: 1rem;
+                }
+        
+                &:hover {
+                    color: #EEEEEE;
+                    transform: translateY(2px, 1%);
+                    // transform: scale(1.1);
+                }
+        
+                li {
+                   font-size: 1.8rem;
+
+                   @include mobile {
+                    font-size: 1.2rem;
+                   }
+                }
+        
+                
+            }
+        }
+    }
+}
