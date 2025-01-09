@@ -1,4 +1,3 @@
-"use client"
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 
@@ -8,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+  const form = useRef()
 
   const [userInput, setUserInput] = useState({
     name: "",
@@ -38,7 +38,7 @@ const Contact = () => {
         message: userInput.message
       };
 
-      const res = await emailjs.send(serviceID, templateID, emailParams, userID);
+      const res = await emailjs.send('service_f7e04xi', 'template_0pqmcyc', emailParams, {publicKey: 'F9HhsCDQqIHpU8BXK',});
 
       if (res.status === 200) {
         toast.success("Message sent successfully!", {
@@ -81,7 +81,7 @@ const Contact = () => {
       >
         <div className="w-full md:w-[70%] mx-auto">
           <h2 className="text-[40px] md:text-[60px] text-[#e1e1e2] font-semibold mb-8">Get In Touch</h2>
-          <form onSubmit={sendEmail} className="space-y-6">
+          <form onSubmit={sendEmail} ref={form} className="space-y-6">
             <div className="flex flex-col md:flex-row gap-4">
               <input 
                 type="text"
