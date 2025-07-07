@@ -27,6 +27,19 @@ const Contact = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
+    if (!userInput.name.trim() || !userInput.email.trim() || !userInput.message.trim()) {
+      toast.error("Please fill in all fields before submitting.", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+      return;
+    }
+    
+
     const serviceID = process.env.SERVICE_ID;
     const templateID = process.env.TEMPLATE_ID;
     const userID = process.env.PUBLLIC_KEY;
