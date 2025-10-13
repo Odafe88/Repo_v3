@@ -52,7 +52,7 @@ const Contact = () => {
         message: userInput.message
       };
 
-      const res = await emailjs.send(serviceID, templateID, emailParams, {publicKey: userID,});
+      const res = await emailjs.send("service_f7e04xi", "template_0pqmcyc", emailParams, {publicKey: "F9HhsCDQqIHpU8BXK",});
 
       if (res.status === 200) {
         toast.success("Message sent successfully!", {
