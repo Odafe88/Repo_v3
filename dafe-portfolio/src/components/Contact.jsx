@@ -45,9 +45,10 @@ const Contact = () => {
     const userID = process.env.PUBLLIC_KEY;
 
     try {
+
       const emailParams = {
-        name: userInput.name,
-        email: userInput.email,
+        from_name: userInput.name,
+        from_email: userInput.email,
         message: userInput.message
       };
 
