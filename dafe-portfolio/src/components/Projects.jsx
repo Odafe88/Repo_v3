@@ -5,18 +5,18 @@ import React from 'react'
 const Projects = () => {
     const projects = [
         {
-            name: "GraphBlog",
-            excerpt: "A blog site to upload and read stories in real time",
-            live: "http://graph-blog-weld.vercel.app/",
-            gh: "https://github.com/Odafe88/graph-blog",
-            tools: "Next.Js, Tailwindcss, graphql, graphCMS"
+            name: "Tradex",
+            excerpt: "A Crypto and Forex AI Trading Platform",
+            live: "https://tradex-247-lime.vercel.app/",
+            gh: "https://github.com/Odafe88/tradex_247/tree/dev",
+            tools: "REACT.Js, Typescript, Tailwindcss, Supabase, SQL"
         },
         {
-            name: "King's CLothing",
-            excerpt: "An e-commerce site",
-            live: "http://crwn-clothing-odafe88.vercel.app/",
-            gh: "https://github.com/Odafe88/crwn-clothing",
-            tools: "React, Sass, Redux, React Router"
+            name: "Prop Trust",
+            excerpt: "A Property Verification and Listing Platform",
+            live: "https://proptrust.vercel.app/",
+            gh: "https://github.com/DafeDaily/proptrust",
+            tools: "React, Typescript, Redux, Tailwind CSS, Supabase"
         },
         {
             name: "WayRance",
