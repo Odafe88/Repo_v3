@@ -42,7 +42,7 @@ const Contact = () => {
 
     const serviceID = process.env.SERVICE_ID;
     const templateID = process.env.TEMPLATE_ID;
-    const userID = process.env.PUBLLIC_KEY;
+    const userID = process.env.USER_KEY;
 
     try {
 
@@ -52,7 +52,7 @@ const Contact = () => {
         message: userInput.message
       };
 
-      const res = await emailjs.send('service_f7e04xi', 'template_0pqmcyc', emailParams, {publicKey: 'F9HhsCDQqIHpU8BXK',});
+      const res = await emailjs.send(serviceID, templateID, emailParams, {userID,});
 
       if (res.status === 200) {
         toast.success("Message sent successfully!", {
