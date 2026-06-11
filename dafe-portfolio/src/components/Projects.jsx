@@ -44,7 +44,7 @@ const Projects = () => {
     ]
   return (
     <div id="projects"
-        className="container min-h-screen md:h-[70vh] border-b border-[#333] py-[30px] mx-auto md:mt-[100px]"
+        className="container border-b border-[#333] py-[30px] mx-auto md:mt-[100px]"
       >
         <div className="container py-[30px] mx-auto">
             <h2 className="text-[#fff] text-[50px] font-semibold">Solutions & Projects</h2>
