@@ -94,39 +94,40 @@ const Contact = () => {
         className="container min-h-[50vh] border-b border-[#333] py-[30px] mx-auto"
       >
         <div className="w-full md:w-[70%] mx-auto">
-          <h2 className="text-[40px] md:text-[60px] text-[#e1e1e2] font-semibold mb-8">Get In Touch</h2>
+          <h2 className="text-[40px] md:text-[60px] text-[#e1e1e2] font-semibold mb-4">Let&apos;s Work Together</h2>
+          <p className="text-[#b0b0b1] text-lg mb-8">Have a technical challenge or enterprise solution in mind? I&apos;d love to discuss how I can help drive your success.</p>
           <form onSubmit={sendEmail} ref={form} className="space-y-6">
             <div className="flex flex-col md:flex-row gap-4">
               <input 
                 type="text"
                 name="name" 
-                placeholder="Name"
+                placeholder="Your Name"
                 value={userInput.name}
                 onChange={handleChange}
-                className="flex-1 bg-transparent border border-[#333] rounded-md p-4 text-[#e1e1e2] focus:text-[#e1e1e2] focus:border-none focus:bg-transparent transition-colors"
+                className="flex-1 bg-[#1f1f20] border border-[#444] rounded-md p-4 text-[#e1e1e2] placeholder-[#666] focus:text-[#e1e1e2] focus:border-[#7c9dd0] focus:bg-[#1f1f20] transition-colors outline-none"
               />
               <input 
                 type="email" 
                 name="email"
-                placeholder="Email"
+                placeholder="Your Email"
                 value={userInput.email}
                 onChange={handleChange}
-                className="flex-1 bg-transparent border border-[#333] rounded-md p-4 text-[#e1e1e2] focus:text-[#e1e1e2] focus:bg-transparent focus:border-none transition-colors"
+                className="flex-1 bg-[#1f1f20] border border-[#444] rounded-md p-4 text-[#e1e1e2] placeholder-[#666] focus:text-[#e1e1e2] focus:border-[#7c9dd0] focus:bg-[#1f1f20] transition-colors outline-none"
               />
             </div>
             
             <textarea 
-              placeholder="Message" 
+              placeholder="Tell me about your project or inquiry" 
               rows="6"
               name="message"
               value={userInput.message}
               onChange={handleChange}
-              className="w-full bg-transparent border border-[#333] rounded-md p-4 text-[#e1e1e2] focus:border-none transition-colors"
+              className="w-full bg-[#1f1f20] border border-[#444] rounded-md p-4 text-[#e1e1e2] placeholder-[#666] focus:border-[#7c9dd0] transition-colors outline-none"
             ></textarea>
             
             <button 
               type="submit"
-              className="px-8 py-4 border border-[#e1e1e2] rounded-md text-[#e1e1e2] focus:text-[#e1e1e2] focus:border-none focus:bg-transparent hover:text-[#333] hover:border-[#333] transition-colors"
+              className="px-8 py-3 bg-[#7c9dd0] hover:bg-[#5a7fa8] text-[#121112] font-semibold rounded-md transition-colors"
             >
               Send Message
             </button>
@@ -145,7 +146,7 @@ const Contact = () => {
         style={{
           '--toastify-color-dark': '#121112',
           '--toastify-text-color-dark': '#e1e1e2',
-          '--toastify-color-progress-dark': '#333'
+          '--toastify-color-progress-dark': '#7c9dd0'
         }}
       />
       </>

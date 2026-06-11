@@ -20,8 +20,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Dafe Alaiya",
-  description: "Web and Mobile Developer",
+  title: "Dafe Alaiya - Solutions Engineer",
+  description: "Solutions Engineer | Building scalable enterprise solutions | Technical expertise meets business impact",
 };
 
 export default function RootLayout({ children }) {
